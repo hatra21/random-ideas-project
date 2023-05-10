@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const IdeaSchema = new mongoose.Schema({
   text: {
     type: String,
-    require: [true, "PLease add a text field"],
+    require: [true, "Please add a text field"],
   },
   tag: {
     type: String,
@@ -13,7 +13,7 @@ const IdeaSchema = new mongoose.Schema({
   },
   date: {
     type: Date,
-    default: Date.now,
+    default: Date.now(),
   },
 });
 
