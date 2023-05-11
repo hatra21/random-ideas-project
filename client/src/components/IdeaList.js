@@ -23,14 +23,6 @@ class IdeaList {
         this.deleteIdea(cardToDelete.dataset.id);
       }
     });
-
-    this._ideaListEl.addEventListener("click", (e) => {
-      if (e.target.className === "update") {
-        //e.stopImmediatePropagation();
-        console.log("in ideaList func");
-        this.updateIdea.bind(this);
-      }
-    });
   }
 
   async getIdeas() {
@@ -81,9 +73,14 @@ class IdeaList {
           localStorage.getItem("username") === idea.username
             ? `<button class="delete"><i class="fas fa-times"></i></button>`
             : "";
+        const updateBtn =
+          localStorage.getItem("username") === idea.username
+            ? `<button class="update"><i class="fas fa-pen"></i></button>`
+            : "";
 
         return `<div class="card" data-id="${idea._id}">
-          ${deleteBtn}      
+          ${deleteBtn} 
+          ${updateBtn}     
           <h3>
             ${idea.text}
           </h3>

@@ -13,7 +13,7 @@ class IdeaForm {
       .addEventListener("submit", this.handleSubmit.bind(this));
   }
 
-  async handleSubmit(e, ideaId) {
+  async handleSubmit(e) {
     e.preventDefault();
 
     const ideaForm = document.querySelector("#idea-form");
@@ -32,11 +32,6 @@ class IdeaForm {
       tag: ideaForm.elements.tag.value,
       username: ideaForm.elements.username.value,
     };
-
-    if (this.editMode) {
-      console.log("this idea exists");
-      const updatedIdea = await IdeasApi.updateIdea(ideaId, idea);
-    }
 
     //add idea to server
     const newIdea = await IdeasApi.createIdea(idea);
