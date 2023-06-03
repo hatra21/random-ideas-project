@@ -5,7 +5,7 @@ import Modal from "./Modal";
 class UpdateForm {
   constructor(ideaToUpdate) {
     this.ideaToUpdate = ideaToUpdate;
-    this._formModal = document.querySelector("#update-form-modal");
+    this._formModal = document.querySelector("#form-update-modal");
     this._ideaList = new IdeaList();
     this._modal = new Modal();
   }

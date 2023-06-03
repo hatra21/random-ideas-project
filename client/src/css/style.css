@@ -52,7 +52,7 @@ header {
   animation-duration: var(--modal-duration);
 }
 
-#update-form-modal {
+#form-update-modal {
   background-color: rgb(112, 57, 112);
 }
 

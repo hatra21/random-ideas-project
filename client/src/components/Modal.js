@@ -1,7 +1,7 @@
 class Modal {
   constructor() {
     this._modal = document.querySelector("#modal");
-    this._modalUpdate = document.querySelector("#update-modal");
+    this._modalUpdate = document.querySelector("#modal-update");
     this._modalBtn = document.querySelector("#modal-btn");
     this.addEventListeners();
   }
